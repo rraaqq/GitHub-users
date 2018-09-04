@@ -26,14 +26,19 @@
     render() {
       return (
         <div>
-          <form onSubmit={event => this.onSubmit(event)}>
-            <label htmlFor="searchText">Search by user name</label>
-            <input
-              type="text"
-              id="searchText"
-              onChange={event => this.onChangeHandle(event)}
-              value={this.state.searchText}/>
-          </form>
+          <div className="logo">
+            <img src="https://dwa5x7aod66zk.cloudfront.net/assets/pack/logo-github-fe55a081ff239877f791f5882f9c3cddc371653c88d9b06f504ea10f453996ed.jpg" />
+          </div>
+          <div className="container">
+            <form onSubmit={event => this.onSubmit(event)}>
+              <label htmlFor="searchText">Search by user name: </label>
+                <input
+                  type="text"
+                  id="searchText"
+                  onChange={event => this.onChangeHandle(event)}
+                  value={this.state.searchText} />
+            </form>
+          </div> 
           <UsersList users={this.state.users}/>
         </div>
       );
@@ -49,7 +54,7 @@
   
     render() {
       return (
-        <div>
+        <div className="box">
           {this.users}
         </div>
       );
@@ -61,8 +66,8 @@
   class User extends React.Component {
     render() {
       return (
-        <div>
-          <img src={this.props.user.avatar_url} style={{maxWidth: '100px'}}/>
+        <div className="user">
+          <img src={this.props.user.avatar_url} style={{maxWidth: '150px'}}/>
           <a href={this.props.user.html_url} target="_blank">{this.props.user.login}</a>
         </div>
       );
