@@ -1,3 +1,3 @@
-# es6-15.9
+# GitHub users (React, ES6)
 
-https://rraaqq.github.io/es6-15.9/
+https://rraaqq.github.io/GitHub-users/
